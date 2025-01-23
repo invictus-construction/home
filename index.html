@@ -79,9 +79,21 @@
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .project img {
-            max-width: 100%;
+        .project .image-pair {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .project .image-pair img {
+            max-width: 48%;
             border-radius: 5px;
+        }
+        .project .image-pair .caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
         }
         footer {
             background-color: #1a1a1a;
@@ -115,24 +127,24 @@
     <h2>Our Services</h2>
     <div class="services">
         <div class="service">
-            <img src="images/Garage Roofing.jpg" alt="New Roof">
+            <img src="https://via.placeholder.com/300x200" alt="Other Projects">
+            <h3>Other Projects</h3>
+            <p>We offer a wide variety of additional services tailored to your needs, including fencing, deck construction, custom cabinetry, window replacements, and more. If you can envision it, we can bring it to life with precision and care!</p>
+        </div>
+        <div class="service">
+            <img src="Roof Sheeting.jpg" alt="New Roof">
             <h3>New Roofs</h3>
             <p>Need a new roof? We have you and your house covered!</p>
         </div>
         <div class="service">
-            <img src="images/Laundry Room Complete.jpg" alt="Tiling Floors">
-            <h3>Tiling Floors</h3>
-            <p>We provide expert tiling services to upgrade your floors with style and durability.</p>
-        </div>
-        <div class="service">
-            <img src="images/Main bathroom finish.jpg" alt="Bathroom Renovations">
+            <img src="Main bathroom finish.jpg" alt="Bathroom Renovations">
             <h3>Bathroom Renovations</h3>
             <p>We can transform your outdated bathroom into a luxurious retreat!</p>
         </div>
         <div class="service">
-            <img src="images/Home made bookshelf.jpg" alt="Other Projects">
-            <h3>Other Projects</h3>
-            <p>We offer a wide variety of additional services tailored to your needs, including fencing, deck construction, sheds, window replacements, and more. If you can envision it, we can bring it to life with precision and quality!</p>
+            <img src="Laundry Room Complete.jpg" alt="Tiling Floors">
+            <h3>Tiling Floors</h3>
+            <p>We provide expert tiling services to upgrade your floors with style and durability.</p>
         </div>
     </div>
 </section>
@@ -141,85 +153,97 @@
     <h2>Past Projects</h2>
     <div class="projects">
         <div class="project">
-            <img src="images/Downstairs bathroom before.jpg" alt="Downstairs Bathroom - Before">
-            <img src="images/Basement Bathroom Complete.jpg" alt="Downstairs Bathroom - After">
-            <img src="images/Basement Bathroom Finished.jpg" alt="Downstairs Bathroom - After">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Bathroom - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Bathroom - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Downstairs Bathroom</h3>
             <p>A complete transformation to bring modern luxury and functionality.</p>
         </div>
         <div class="project">
-            <img src="images/Downstairs Kitchen Before 1.jpg" alt="Downstairs Kitchen - Before">
-            <img src="images/Basement Kitchen Complete.jpg" alt="Downstairs Kitchen - After">
-            <img src="images/Basement Kitchen Pantry.jpg" alt="Downstairs Kitchen - Pantry">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Kitchen - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Kitchen - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Downstairs Kitchen</h3>
             <p>An upgraded kitchen featuring contemporary design and improved usability.</p>
         </div>
         <div class="project">
-            <img src="images/Ensuite during.jpg" alt="Ensuite Bathroom - Before">
-            <img src="images/Ensuite complete.jpg" alt="Ensuite Bathroom - After">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Ensuite Bathroom - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Ensuite Bathroom - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Ensuite Bathroom</h3>
             <p>A personalized ensuite renovation with premium materials and style.</p>
         </div>
         <div class="project">
-            <img src="images/Main bathroom start.jpg" alt="Main Bathroom - Before">
-            <img src="images/Main bathroom finish.jpg" alt="Main Bathroom - After">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Main Bathroom - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Main Bathroom - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Main Bathroom</h3>
             <p>Modern updates for a sleek and functional main bathroom.</p>
         </div>
         <div class="project">
-            <img src="images/Kitchen during.jpg" alt="Kitchen - Before">
-            <img src="images/Kitchen Complete.jpg" alt="Kitchen - After">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Kitchen - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Kitchen - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Kitchen</h3>
             <p>Comprehensive remodel bringing a fresh and inviting culinary space.</p>
         </div>
         <div class="project">
-            <img src="images/Outdoor kitchen start.jpg" alt="Outdoor Kitchen - Before">
-            <img src="images/Outdoor kitchen complete.jpg" alt="Outdoor Kitchen - After">
+            <div class="image-pair">
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Outdoor Kitchen - Before">
+                    <p class="caption">Before</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300x200" alt="Outdoor Kitchen - After">
+                    <p class="caption">After</p>
+                </div>
+            </div>
             <h3>Outdoor Kitchen</h3>
             <p>A beautifully designed outdoor kitchen for entertaining and leisure.</p>
         </div>
-        <div class="project">
-            <img src="images/Stairway Before.jpg" alt="Staircase - Before">
-            <img src="images/Stairway During.jpg" alt="Staircase - Before">
-            <img src="images/Stairway After 1.jpg" alt="Staircase - After">
-            <img src="images/Stairway After 2.jpg" alt="Staircase - After">
-            <h3>Staircases</h3>
-            <p>Elegant staircase makeovers for a stunning entryway and interior.</p>
-        </div>
-        <div class="project">
-            <img src="images/Privacy wall.jpg" alt="Privacy Wall">
-            <img src="images/Home made bookshelf.jpg" alt="Bookshelf">
-            <h3>Custom Privacy Wall & Bookshelf</h3>
-            <p>Custom-built privacy wall providing beauty and seclusion, and custom made bookshelf.</p>
-        </div>
-        <div class="project">
-            <img src="images/2nd Story Addition.jpg" alt="Garage - Progress 1">
-            <img src="images/Roof Sheeting.jpg" alt="Garage - Progress 2">
-            <img src="images/2nd Story Addition Roofing.jpg" alt="Garage - Progress 3">
-            <h3>Garage</h3>
-            <p>Big 2nd Story Addition framed and Roofed.</p>
-        </div>
-        <div class="project">
-            <img src="images/Garage Framing.jpg" alt="Garage - Progress 1">
-            <img src="images/Garage Roofing.jpg" alt="Garage - Progress 2">
-            <img src="images/Garage Roof and Siding Complete.jpg" alt="Garage - Progress 3">
-            <h3>Garage</h3>
-            <p>Step-by-step garage construction, framing, siding, and roofing. </p>
-        </div>
-        <div class="project">
-            <img src="images/Foyer Entrance Complete.jpg" alt="Tiling - 1">
-            <img src="images/Laundry Room Complete.jpg" alt="Tiling - 2">
-            <img src="images/Basement kitchen table.jpg" alt="Tiling - 3">
-            <h3>Tiling Projects</h3>
-            <p>Expert tiling services that enhance durability and aesthetics.</p>
-        </div>
     </div>
+</section>
 
 <section id="contact">
     <h2>Contact Us</h2>
     <p>Have a project in mind? We'd love to hear from you!</p>
     <p>Email: construct.invictus@gmail.com</p>
-    <p>Phone: (732) 668-1401</p>
+    <p>Phone: (226) 349-7350</p>
 </section>
 
 <footer>
