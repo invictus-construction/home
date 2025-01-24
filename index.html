@@ -73,27 +73,35 @@
             gap: 20px;
         }
         .project {
-            flex: 1 1 calc(33.333% - 20px);
+            flex: 1 1 calc(50% - 20px);
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .project .image-pair {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-        .project .image-pair img {
-            max-width: 48%;
+        .project img {
+            max-width: 100%;
             border-radius: 5px;
         }
-        .project .image-pair .caption {
+        .project .before-after {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .project .before-after img {
+            width: 48%;
+            border-radius: 5px;
+        }
+        .project .captions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .project .captions span {
+            width: 48%;
             text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            margin-top: 5px;
+            font-weight: bold;
+            display: inline-block;
         }
         footer {
             background-color: #1a1a1a;
@@ -127,11 +135,6 @@
     <h2>Our Services</h2>
     <div class="services">
         <div class="service">
-            <img src="https://via.placeholder.com/300x200" alt="Other Projects">
-            <h3>Other Projects</h3>
-            <p>We offer a wide variety of additional services tailored to your needs, including fencing, deck construction, custom cabinetry, window replacements, and more. If you can envision it, we can bring it to life with precision and care!</p>
-        </div>
-        <div class="service">
             <img src="Roof Sheeting.jpg" alt="New Roof">
             <h3>New Roofs</h3>
             <p>Need a new roof? We have you and your house covered!</p>
@@ -153,88 +156,100 @@
     <h2>Past Projects</h2>
     <div class="projects">
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Bathroom - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Bathroom - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Downstairs Bathroom - Before.jpg" alt="Downstairs Bathroom - Before">
+                <img src="Downstairs Bathroom - After.jpg" alt="Downstairs Bathroom - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Downstairs Bathroom</h3>
             <p>A complete transformation to bring modern luxury and functionality.</p>
         </div>
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Kitchen - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Downstairs Kitchen - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Downstairs Kitchen - Before.jpg" alt="Downstairs Kitchen - Before">
+                <img src="Downstairs Kitchen - After.jpg" alt="Downstairs Kitchen - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Downstairs Kitchen</h3>
             <p>An upgraded kitchen featuring contemporary design and improved usability.</p>
         </div>
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Ensuite Bathroom - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Ensuite Bathroom - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Ensuite Bathroom - Before.jpg" alt="Ensuite Bathroom - Before">
+                <img src="Ensuite Bathroom - After.jpg" alt="Ensuite Bathroom - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Ensuite Bathroom</h3>
             <p>A personalized ensuite renovation with premium materials and style.</p>
         </div>
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Main Bathroom - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Main Bathroom - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Main Bathroom - Before.jpg" alt="Main Bathroom - Before">
+                <img src="Main Bathroom - After.jpg" alt="Main Bathroom - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Main Bathroom</h3>
             <p>Modern updates for a sleek and functional main bathroom.</p>
         </div>
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Kitchen - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Kitchen - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Kitchen - Before.jpg" alt="Kitchen - Before">
+                <img src="Kitchen - After.jpg" alt="Kitchen - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Kitchen</h3>
             <p>Comprehensive remodel bringing a fresh and inviting culinary space.</p>
         </div>
         <div class="project">
-            <div class="image-pair">
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Outdoor Kitchen - Before">
-                    <p class="caption">Before</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/300x200" alt="Outdoor Kitchen - After">
-                    <p class="caption">After</p>
-                </div>
+            <div class="before-after">
+                <img src="Outdoor Kitchen - Before.jpg" alt="Outdoor Kitchen - Before">
+                <img src="Outdoor Kitchen - After.jpg" alt="Outdoor Kitchen - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
             </div>
             <h3>Outdoor Kitchen</h3>
             <p>A beautifully designed outdoor kitchen for entertaining and leisure.</p>
+        </div>
+        <div class="project">
+            <div class="before-after">
+                <img src="Staircase - Before.jpg" alt="Staircase - Before">
+                <img src="Staircase - After.jpg" alt="Staircase - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
+            </div>
+            <h3>Staircases</h3>
+            <p>Elegant staircase makeovers for a stunning entryway and interior.</p>
+        </div>
+        <div class="project">
+            <div class="before-after">
+                <img src="Roof Sheathing - During.jpg" alt="Roof Sheathing - During">
+                <img src="Roof Sheathing - After.jpg" alt="Roof Sheathing - After">
+            </div>
+            <div class="captions">
+                <span>Before</span>
+                <span>After</span>
+            </div>
+            <h3>Roof Sheathing</h3>
+            <p>Roof repairs and reinforcements to protect and enhance your home.</p>
         </div>
     </div>
 </section>
