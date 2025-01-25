@@ -90,12 +90,13 @@
             display: grid;
             justify-content: center; /* Centers the images */
             flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
-            grid-template-columns: repeat(3, 1fr); /* Ensures 3 pictures per row */
+            grid-template-columns: auto-fit, minmax(300px, 1fr); /* Ensures 3 pictures per row */
             gap: 10px; /* Adds spacing between images */
             justify-items: center; /* Centers the images horizontally */
         }
         .project .before-after img {
             width: 100%;
+            max width: 300px;
             height: auto;
             flex: 1 1 30%; /* Ensures images scale to fit the screen */
             border-radius: 5px;
