@@ -95,19 +95,15 @@
             justify-items: center; /* Centers the images horizontally */
         }
         .project .before-after img {
-            width: calc(33% - 4%); /* Ensures three images per row */
-            max-width: 48%; /* For rows with two images, allows them to shrink slightly */
+            width: 100%;
+            max width: 100%;
             height: auto;
             flex: 1 1 30%; /* Ensures images scale to fit the screen */
             border-radius: 5px;
         }
-         .project .before-after img:nth-child(odd):only-child,
-         .project .before-after img:nth-child(even):only-child {
-            width: calc(50% - 4%); /* Ensures two images are evenly spaced and centered */
-        }
         .project .captions {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
         }
         .project .captions span {
             width: 48%;
