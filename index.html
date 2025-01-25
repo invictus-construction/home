@@ -88,11 +88,14 @@
         }
         .project .before-after {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            justify-content: center; /* Centers the images */
+            flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+            gap: 10px; /* Adds spacing between images */
         }
         .project .before-after img {
             width: 48%;
+            height: auto;
+            flex: 1 1 30%; /* Ensures images scale to fit the screen */
             border-radius: 5px;
         }
         .project .captions {
