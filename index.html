@@ -120,6 +120,19 @@
             font-weight: bold;
             display: inline-block;
         }
+        .captions-three {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .captions-three span:first-child {
+            text-align: left; /* Align "Before" under the first image */
+            width: 33%; /* Matches the first image */
+        }
+        .captions-three span:last-child {
+            text-align: center; /* Align "After" between the 2nd and 3rd images */
+            width: 66%; /* Spans across the last two images */
+        }
         footer {
             background-color: #1a1a1a;
             color: white;
@@ -186,7 +199,7 @@
                 <img src="images/Basement Bathroom Complete.jpg" alt="Downstairs Bathroom - After">
                 <img src="images/Basement Bathroom Finished.jpg" alt="Downstairs Bathroom - After">
             </div>
-            <div class="captions">
+            <div class="captions captions-three">
                 <span>Before</span>
                 <span>After</span>
             </div>
@@ -199,7 +212,7 @@
                 <img src="images/Basement Kitchen Complete.jpg" alt="Downstairs Kitchen - After">
                 <img src="images/Basement Kitchen Pantry.jpg" alt="Downstairs Kitchen - Pantry">
             </div>
-            <div class="captions">
+            <div class="captions captions-three">
                 <span>Before</span>
                 <span>After</span>
             </div>
@@ -223,7 +236,7 @@
                <img src="images/Main bathroom start.jpg" alt="Main Bathroom - Before">
                <img src="images/Main bathroom finish.jpg" alt="Main Bathroom - After">
             </div>
-            <div class="captions">
+            <div class="captions captions-three">
                 <span>Before</span>
                 <span>After</span>
             </div>
@@ -307,15 +320,13 @@
                 <img src="images/Foyer Entrance Complete.jpg" alt="Tiling - 1">
                 <img src="images/Laundry Room Complete.jpg" alt="Tiling - 2">
                 <img src="images/Basement kitchen table.jpg" alt="Tiling - 3">
-          </div>
-             <div class="captions">
-                <span>Foyer Tiling</span>
-                <span>Landry Room Tiling</span>
-                <span>Basement Kitchen Tiling</span>
                 <img src="images/Shower Tiling.jpg" alt="Tiling - 4">
                 <img src="images/Shower Window.jpg" alt="Tiling - 5">
             </div>
                   <div class="captions">
+                <span>Foyer Tiling</span>
+                <span>Landry Room Tiling</span>
+                <span>Basement Kitchen Tiling</span>
                 <span>Shower Tiling</span>
                 <span>Shower Window Tiling</span>
             </div>
