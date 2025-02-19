@@ -111,7 +111,7 @@
             margin-top: 15px;
          }
         .quote-button {
-            display: inline-block;
+            display: block;
             background-color: #3408a4;
             color: white;
             padding: 15px 25px;
@@ -120,8 +120,9 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
+            margin: 20px auto;
             text-decoration: none;
+            width: fit-content;
         }
         .quote-button:hover {
             background-color: #240679;
@@ -203,6 +204,11 @@
             text-align: center;
         }
     </style>
+    <script>
+        function showQuoteForm() {
+            document.getElementById('quoteForm').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
 
@@ -262,7 +268,16 @@
         </div>
     </div>
     </p>
-            <a href="#contact" class="quote-button">Get a Quote</a>
+            <button class="quote-button" onclick="showQuoteForm()">Get a Quote</button>
+            <form id="quoteForm" class="quote-form" action="https://formsubmit.co/construct.invictus@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <textarea name="message" placeholder="What kind of project would you like done?" rows="4" required></textarea>
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Submit</button>
+            </form>
 </section>
 
 <section id="projects">
