@@ -87,6 +87,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invictus Construction Sarnia</title>
     <style>
+         .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .review-box {
+            flex: 1 1 45%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .review-box h3 {
+            margin-top: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -555,15 +581,39 @@
 
 <section id="reviews" class="fade-in">
     <h2 style="text-align: center;">Customer Reviews</h2>
-    <div class="service">
-        <h3>John</h3>
-        <p>Josh tiled the floors and walls of our downstairs kitchen and bathroom including the backsplash in the kitchen. He had to straighten all of the bathroom walls before he could tile. He put in a shampoo nook which we really appreciate. He also installed the vanity and plumbed in the sink. We are happy with his work.</p>
-    </div>
-    <div class="service">
-        <h3>Blake Collinson</h3>
-        <p>Extremely professional. Just great all around customer service. Great work!</p>
+    <div class="review-container">
+        <div class="review-box">
+            <h3>John</h3>
+            <p>Josh tiled the floors and walls of our downstairs kitchen and bathroom including the backsplash in the kitchen. He had to straighten all of the bathroom walls before he could tile. He put in a shampoo nook which we really appreciate. He also installed the vanity and plumbed in the sink. We are happy with his work.</p>
+        </div>
+        <div class="review-box">
+            <h3>Blake Collinson</h3>
+            <p>Extremely professional. Just great all around customer service. Great work!</p>
+        </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    });
+</script>
 
 <section id="contact" class="fade-in">
     <h2>Contact Us</h2>
