@@ -312,6 +312,16 @@
             text-align: center;
         }
     </style>
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
     <script>
         function showQuoteForm() {
             document.getElementById('quoteForm').style.display = 'block';
@@ -333,7 +343,7 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="fade-in">
     <div class="about-content">
         <div class="about-text">
             <h2>About Us</h2>
@@ -351,7 +361,7 @@
     </div>
 </section>
 
-<section id="services">
+<section id="services" class="fade-in">
     <h2>Our Services</h2>
     <div class="services">
         <div class="service">
@@ -388,7 +398,7 @@
             </form>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-in">
     <h2>Past Projects</h2>
     <div class="projects">
         <div class="project">
@@ -543,7 +553,19 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="reviews" class="fade-in">
+    <h2 style="text-align: center;">Customer Reviews</h2>
+    <div class="service">
+        <h3>John</h3>
+        <p>Josh tiled the floors and walls of our downstairs kitchen and bathroom including the backsplash in the kitchen. He had to straighten all of the bathroom walls before he could tile. He put in a shampoo nook which we really appreciate. He also installed the vanity and plumbed in the sink. We are happy with his work.</p>
+    </div>
+    <div class="service">
+        <h3>Blake Collinson</h3>
+        <p>Extremely professional. Just great all around customer service. Great work!</p>
+    </div>
+</section>
+
+<section id="contact" class="fade-in">
     <h2>Contact Us</h2>
     <p>Have a project in mind? We'd love to hear from you!</p>
     <p>Email: construct.invictus@gmail.com</p>
@@ -553,6 +575,26 @@
 <footer>
     <p>&copy; 2025 Invictus Construction Sarnia. All rights reserved.</p>
 </footer>
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
 
 </body>
 </html>
