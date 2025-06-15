@@ -87,32 +87,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invictus Construction Sarnia</title>
     <style>
-         .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .review-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .review-box {
-            flex: 1 1 45%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
-        }
-        .review-box h3 {
-            margin-top: 0;
-        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -338,16 +312,6 @@
             text-align: center;
         }
     </style>
-    .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>
     <script>
         function showQuoteForm() {
             document.getElementById('quoteForm').style.display = 'block';
@@ -369,7 +333,7 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about" class="fade-in">
+<section id="about">
     <div class="about-content">
         <div class="about-text">
             <h2>About Us</h2>
@@ -387,7 +351,7 @@
     </div>
 </section>
 
-<section id="services" class="fade-in">
+<section id="services">
     <h2>Our Services</h2>
     <div class="services">
         <div class="service">
@@ -424,7 +388,7 @@
             </form>
 </section>
 
-<section id="projects" class="fade-in">
+<section id="projects">
     <h2>Past Projects</h2>
     <div class="projects">
         <div class="project">
@@ -579,7 +543,7 @@
     </div>
 </section>
 
-<section id="reviews" class="fade-in">
+<section id="reviews">
     <h2 style="text-align: center;">Customer Reviews</h2>
     <div class="review-container">
         <div class="review-box">
@@ -593,29 +557,7 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    });
-</script>
-
-<section id="contact" class="fade-in">
+<section id="contact">
     <h2>Contact Us</h2>
     <p>Have a project in mind? We'd love to hear from you!</p>
     <p>Email: construct.invictus@gmail.com</p>
@@ -625,26 +567,6 @@
 <footer>
     <p>&copy; 2025 Invictus Construction Sarnia. All rights reserved.</p>
 </footer>
-<script>
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-</script>
 
 </body>
 </html>
