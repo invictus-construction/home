@@ -124,6 +124,13 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+             opacity: 1;
+             transform: translateY(0);
         }
         section h2 {
             color: #1a1a1a;
@@ -170,6 +177,36 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .review {
+             background-color: #ffffff;
+             padding: 2rem;
+             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 400px;
+            max-width: 500px;
+            text-align: left;
+            border-left: 4px solid #2c3e50;
+            transition: transform 0.3s ease;
+        }
+        .review:hover {
+            transform: translateY(-5px);
+        }
+        .review p {
+             font-size: 1rem;
+             color: #555;
+            margin-bottom: 1rem;
+        }
+        .review h3 {
+             font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
         }
         .services {
             display: flex;
@@ -331,6 +368,7 @@
     <a href="#services">Services</a>
     <a href="#projects">Past Projects</a>
     <a href="#contact">Contact</a>
+    <a href="#reviews">Contact</a>
 </nav>
 
 <section id="about">
@@ -567,6 +605,18 @@
 <footer>
     <p>&copy; 2025 Invictus Construction Sarnia. All rights reserved.</p>
 </footer>
+
+<script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
