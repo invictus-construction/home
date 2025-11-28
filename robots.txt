@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
-https://invictus-construction.github.io/home/sitemap.xml
+
+# Sitemap location (helps search engines discover your pages)
+Sitemap: https://invictus-construction.github.io/home/sitemap.xml
+
+# If you later add private or staging folders, disallow them like this:
+# Disallow: /private/
